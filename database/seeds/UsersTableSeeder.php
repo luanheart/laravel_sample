@@ -16,10 +16,11 @@ class UsersTableSeeder extends Seeder
         User::insert($users->toArray());
 
         $user = User::find(1);
-        $user->name = 'Aufree';
-        $user->email = 'aufree@estgroupe.com';
-        $user->password = bcrypt('password');
+        $user->name = 'luanheart';
+        $user->email = 'luanheartx@gmail.com';
+        $user->password = bcrypt('123456');
         $user->is_admin = true;
+        $user->activated = true;
         $user->save();
     }
 }
