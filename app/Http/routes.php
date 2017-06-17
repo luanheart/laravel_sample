@@ -37,3 +37,9 @@ Route::get('/users/{id}/followers', 'UsersController@followers')->name('users.fo
 
 Route::post('/users/followers/{id}', 'FollowersController@store')->name('followers.store');
 Route::delete('/users/followers/{id}', 'FollowersController@destroy')->name('followers.destroy');
+
+Route::get('/test', function () {
+//   Redis::set('name', 'Taylor');
+   $user =  Redis::get('name');
+   var_dump($user);
+});
